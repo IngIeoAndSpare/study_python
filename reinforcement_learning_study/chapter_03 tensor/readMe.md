@@ -37,6 +37,12 @@ tensor_float = torch.FloatTensor(3,2)
     * 쉽게 이해하자면 `i += y` 수식이라 생각하면 편하다.
         * ex) zero_(), add_() eta... 
         * example
+
+    * functional : tensor 를 복사하여 연산을 수행하기에 tensor 값은 변하지 않는다.
+        * ex) zero(), add()
+        * example
+
+#### in-place 예시 ####
 ```python
 import torch
 x = torch.rand(1)
@@ -56,9 +62,8 @@ print(f"x => {x} || y=> {y}")
 # after opertation
 # x => tensor([1.1966]) || y=> tensor([0.7268])
 ```
-    * functional : tensor 를 복사하여 연산을 수행하기에 tensor 값은 변하지 않는다.
-        * ex) zero(), add()
-        * example
+
+#### functional 예시 ####
 ```python
 import torch
 x = torch.rand(1)
