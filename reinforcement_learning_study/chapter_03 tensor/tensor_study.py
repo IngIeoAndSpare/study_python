@@ -19,8 +19,14 @@ print(tensor_float)
 #        [0., 0.],
 #        [0., 0.]])
 
+n_array = np.random.rand(3,2)
+np_tensor = torch.tensor(n_array, dtype=torch.float32)
+print(np_tensor)
 
-x = torch.rand(1)
+it_tensor = torch.tensor([[1, 2, 3], [2, 3, 4]])
+print(it_tensor)
+
+x = torch.rand(1) #random으로 1x1 tensor 생성
 y = torch.rand(1)
 
 print(f"before opertation")
