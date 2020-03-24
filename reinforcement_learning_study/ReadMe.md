@@ -2,7 +2,7 @@
 
 * 강화학습을 수업으로 듣기는 했는데 이제 책으로도 한번 훓어볼 때가 되었다.
 
-    *[공부용_책](https://book.naver.com/bookdb/book_detail.nhn?bid=16293174) 을 보면서 공부하도록 하자.
+    *[해법코드로 설명한 심층강화학습](https://book.naver.com/bookdb/book_detail.nhn?bid=16293174) 을 보면서 공부하도록 하자.
 
 ## env 설정 ##
 
