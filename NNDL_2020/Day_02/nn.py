@@ -241,24 +241,8 @@ class NeuralNetwork(object):
             ###########################################################################
 		    # TODO: Implement the partial derivative of dW_l & db_l for weights and bias  #
 			###########################################################################
-
-            da_l = deltas[l]
-            print(f"da_l      => {da_l.shape}")
-
-            '''
-            test = activation(pre_activations[l], True)
-            print(f"test      => {test.shape}")
-            '''
-            
-            dz_l = np.dot(da_l, test)
-            db_l = np.sum(dz_l, axis=1, keepdims=True) / pre_activations[l].shape[1]
-            dW_l = np.dot(dz_l, pre_activations[l].transpose()) / pre_activations[l].shape[1] 
-            
-            print(f"self size => {self.size}")
-            print(f"da_l  => {dz_l[l]}")
-
-            print("===============================================")
-            ## TODO 3.25 : setting da, dz ...eta
+            dW_l = np.dot(deltas[l], activations[l - 1].transpose())
+            db_l = deltas[l]
 		    ###########################################################################
 		    #                             END OF YOUR CODE                            #
 		    ###########################################################################
