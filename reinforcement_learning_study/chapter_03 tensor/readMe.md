@@ -104,3 +104,17 @@ print(f"x => {x} || y=> {y}")
 # x => tensor([0.7315]) || y=> tensor([0.0467])
 ```
 
+### tensor calcualte space define ###
+**tensor 연산을 실행하는 주체를 결정한다**
+보통 컴퓨터의 연산들은 cpu가 담당하지만, matrix 와 같은 데이터는 병렬처리 및 연산이 빠른 GPU가 담당할 수 있다.
+
+* 연산 주체는 다음과 같이 설정할 수 있다.
+```python
+import torch
+cuda0 = torch.device('cuda:0')
+x = torch.rand(1).to(cuda0) # tensor 계산 주체를 cuda 0 로 설정
+```
+cuda:0 은 컴퓨터의 `GPU 0`번을 쓰겠다는 의미이다. GPU가 많다면 0번부터 n 번까지 설정할 수 있다.
+
+주의할 점으론 실제 쿠다에 tensor 가 생성되는 것은 아니고, CPU에 tensor를 생성하고 이를 GPU에 복사한 후 사용되는 형식이다.
+
