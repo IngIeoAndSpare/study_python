@@ -11,7 +11,9 @@
 ### tensor 기본 ###
 **torch의 네트워크에 사용되는 데이터 object**
 
-* tensor는 [pytorch.tensor](https://pytorch.org/docs/stable/tensors.html)를 보면 **multi-dimensional matirix** 즉 다차원 행렬이다. 이 때, 행렬에 들어가는 데이터는 실수 형태 혹은 bool 값으로 될 수 있으며 아래와 같이 선언할 수 있다.
+* 정말 간단하게 설명하면 tensor는 [pytorch.tensor](https://pytorch.org/docs/stable/tensors.html)를 보면 **multi-dimensional matirix** 즉 다차원 행렬이다. 이 때, 행렬에 들어가는 데이터는 실수 형태 혹은 bool 값으로 될 수 있으며 아래와 같이 선언할 수 있다.
+
+* (+) 덧붙여서 tensor는 실제 학습 **[backward]**(https://pytorch.org/docs/stable/_modules/torch/tensor.html#Tensor.backward)에 필요한 데이터, 그리고 학습을 위한 `metadata`를 저장하는 객체 **[computation graphs]**(https://jdhao.github.io/2017/11/12/pytorch-computation-graph/) 와 함께 사용하여 학습을 진행한다.
 
 ```python
 import torch
